@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pedido em processamento - Crowns Store</title>
+<style>
+*{box-sizing:border-box}
+body{
+  margin:0;min-height:100vh;display:flex;align-items:center;
+  justify-content:center;padding:20px;
+  background:radial-gradient(circle at top,#302638,#09090e 65%);
+  color:white;font-family:Arial,sans-serif;text-align:center
+}
+.card{
+  width:100%;max-width:440px;padding:38px 25px;
+  background:#17151f;border:1px solid #a98743;
+  border-radius:24px;box-shadow:0 15px 60px #0008
+}
+.logo{font-size:27px;font-weight:bold;color:#e7bd63}
+h1{font-size:29px;margin:25px 0 12px}
+.gold{color:#e7bd63}
+.clock{font-size:65px;margin:20px}
+p{color:#c5c0ca;line-height:1.7}
+.time{
+  display:inline-block;padding:12px 20px;
+  border:1px solid #a98743;border-radius:12px;
+  color:#e7bd63;font-weight:bold;margin:12px
+}
+a{display:inline-block;margin-top:22px;color:#e7bd63;text-decoration:none}
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="logo">CROWNS STORE</div>
+  <div class="clock">⌛</div>
+  <h1>Pedido <span class="gold">recebido!</span></h1>
+  <p>Estamos processando seu pedido com carinho.</p>
+  <div class="time">AGUARDE POR ATÉ 1 HORA</div>
+  <p>Por favor, aguarde enquanto verificamos as informações do seu pedido.</p>
+  <a href="https://crowns-store.onrender.com">VOLTAR À LOJA</a>
+</div>
+</body>
+</html>
