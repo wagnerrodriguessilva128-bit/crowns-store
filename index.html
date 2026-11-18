@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="pt-BR">
 <head>
@@ -5,92 +6,289 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#0b0b10">
   <title>Crowns Store</title>
+
   <style>
-    :root{--bg:#0b0b10;--panel:#15151e;--gold:#e7bd63;--muted:#aaa8b4;--line:#2b2934}
-    *{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at top,#24202a 0,#0b0b10 48%);color:#f8f5ee;font-family:Arial,Helvetica,sans-serif;min-height:100vh}
-    .wrap{width:min(960px,92%);margin:0 auto;padding:38px 0 60px}
-    header{text-align:center;margin-bottom:30px}.logo{display:inline-flex;align-items:center;justify-content:center;width:58px;height:58px;border:1px solid var(--gold);border-radius:18px;color:var(--gold);font-size:25px;font-weight:900}
-    h1{margin:14px 0 8px;font-size:clamp(30px,5vw,44px);letter-spacing:1px}.gold{color:var(--gold)}header p{color:var(--muted);margin:0}
-    .panel{background:rgba(21,21,30,.96);border:1px solid var(--line);border-radius:20px;padding:24px;margin:18px 0;box-shadow:0 18px 55px #0005}
-    h2{font-size:19px;margin:0 0 16px}.choices{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
-    .choice{position:relative}.choice input{position:absolute;opacity:0}.choice label{display:block;text-align:center;padding:20px 10px;border:1px solid var(--line);border-radius:15px;cursor:pointer;background:#101018;transition:.2s}
-    .choice label strong{display:block;font-size:27px;color:var(--gold)}.choice label span{font-size:13px;color:var(--muted)}
-    .choice input:checked+label{border-color:var(--gold);box-shadow:0 0 0 1px var(--gold) inset;background:#282116}
-    .items{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
-    .item{border:1px solid var(--line);border-radius:14px;padding:15px;background:#101018;display:flex;gap:10px;align-items:center}
-    .item input{accent-color:var(--gold);width:18px;height:18px}.item span{font-size:14px}
-    label.field{display:block;font-size:14px;margin:15px 0 7px;color:#e8e3d8}
-    input[type=email], input[type=text] {
-  width:100%;
-  padding:15px;
-  border-radius:11px;
-  border:1px solid var(--line);
-  background:#0d0d14;
-  color:white;
-  font-size:16px;
-  outline:none;
-}
+    :root {
+      --bg:#0b0b10;
+      --panel:#15151e;
+      --gold:#e7bd63;
+      --muted:#aaa8b4;
+      --line:#2b2934;
+    }
 
-   input[type=email]:focus, input[type=text]:focus {
-  border-color:var(--gold);
-}
+    * { box-sizing:border-box; }
 
-.hint {
-  font-size:12px;
-  color:var(--muted);
-  line-height:1.5;
-  margin-top:12px;
-}
-    button{width:100%;border:0;border-radius:12px;padding:16px;background:linear-gradient(135deg,#f0d18a,#c7973d);color:#17120a;font-weight:800;font-size:16px;cursor:pointer;margin-top:20px}
-    button:hover{filter:brightness(1.06)}.notice{display:none;padding:12px;border-radius:10px;margin-top:14px;background:#2a1c18;color:#ffd2bd;font-size:14px}
-    footer{text-align:center;color:#777481;font-size:12px;margin-top:25px}
-    @media(max-width:620px){.choices,.items{grid-template-columns:1fr}.panel{padding:18px}.choice label{padding:16px}}
+    body {
+      margin:0;
+      background:radial-gradient(circle at top,#24202a 0,#0b0b10 48%);
+      color:#f8f5ee;
+      font-family:Arial,Helvetica,sans-serif;
+      min-height:100vh;
+    }
+
+    .wrap {
+      width:min(960px,92%);
+      margin:0 auto;
+      padding:38px 0 60px;
+    }
+
+    header {
+      text-align:center;
+      margin-bottom:30px;
+    }
+
+    .logo {
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      width:58px;
+      height:58px;
+      border:1px solid var(--gold);
+      border-radius:18px;
+      color:var(--gold);
+      font-size:25px;
+      font-weight:900;
+    }
+
+    h1 {
+      margin:14px 0 8px;
+      font-size:clamp(30px,5vw,44px);
+      letter-spacing:1px;
+    }
+
+    .gold { color:var(--gold); }
+    header p { color:var(--muted); }
+
+    .panel {
+      background:rgba(21,21,30,.96);
+      border:1px solid var(--line);
+      border-radius:20px;
+      padding:24px;
+      margin:18px 0;
+      box-shadow:0 18px 55px #0005;
+    }
+
+    h2 {
+      font-size:19px;
+      margin:0 0 16px;
+    }
+
+    .choices {
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:12px;
+    }
+
+    .choice { position:relative; }
+    .choice input { position:absolute; opacity:0; }
+
+    .choice label {
+      display:block;
+      text-align:center;
+      padding:20px 10px;
+      border:1px solid var(--line);
+      border-radius:15px;
+      cursor:pointer;
+      background:#101018;
+    }
+
+    .choice label strong {
+      display:block;
+      font-size:27px;
+      color:var(--gold);
+    }
+
+    .choice label span {
+      font-size:13px;
+      color:var(--muted);
+    }
+
+    .choice input:checked + label {
+      border-color:var(--gold);
+      background:#282116;
+    }
+
+    .items {
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:12px;
+    }
+
+    .item {
+      border:1px solid var(--line);
+      border-radius:14px;
+      padding:15px;
+      background:#101018;
+      display:flex;
+      gap:10px;
+      align-items:center;
+    }
+
+    .item input { accent-color:var(--gold); }
+
+    label.field {
+      display:block;
+      font-size:14px;
+      margin:15px 0 7px;
+      color:#e8e3d8;
+    }
+
+    #email, #playerId {
+      display:block;
+      width:100%;
+      padding:15px;
+      border-radius:11px;
+      border:1px solid var(--line);
+      background:#0d0d14;
+      color:white;
+      font-size:16px;
+      outline:none;
+    }
+
+    #email:focus, #playerId:focus {
+      border-color:var(--gold);
+    }
+
+    button {
+      width:100%;
+      border:0;
+      border-radius:12px;
+      padding:16px;
+      background:linear-gradient(135deg,#f0d18a,#c7973d);
+      color:#17120a;
+      font-weight:800;
+      font-size:16px;
+      cursor:pointer;
+      margin-top:20px;
+    }
+
+    .hint {
+      font-size:12px;
+      color:var(--muted);
+      line-height:1.5;
+      margin-top:12px;
+    }
+
+    footer {
+      text-align:center;
+      color:#777481;
+      font-size:12px;
+      margin-top:25px;
+    }
+
+    @media(max-width:620px) {
+      .choices, .items { grid-template-columns:1fr; }
+      .panel { padding:18px; }
+    }
   </style>
 </head>
+
 <body>
   <main class="wrap">
+
     <header>
       <div class="logo">C</div>
       <h1><span class="gold">CROWNS</span> STORE</h1>
       <p>Escolha sua opção e envie seu pedido.</p>
     </header>
 
-    <form class="panel" id="orderForm" action="https://formsubmit.co/futbr55@gmail.com" method="POST">
-      <input type="hidden" name="_subject" value="Novo pedido — Crowns Store">
+    <form class="panel"
+      id="orderForm"
+      action="https://formsubmit.co/futbr55@gmail.com"
+      method="POST">
+
+      <input type="hidden" name="_subject"
+        value="Novo pedido — Crowns Store">
+
       <input type="hidden" name="_template" value="table">
       <input type="hidden" name="_captcha" value="false">
-      <input type="hidden" name="_next" value="https://formsubmit.co/thanks">
 
       <h2>Escolha a quantidade de <span class="gold">Crowns</span></h2>
+
       <div class="choices">
-        <div class="choice"><input type="radio" id="c200" name="Produto" value="200 Crowns" required><label for="c200"><strong>200</strong><span>CROWNS</span></label></div>
-        <div class="choice"><input type="radio" id="c500" name="Produto" value="500 Crowns"><label for="c500"><strong>500</strong><span>CROWNS</span></label></div>
-        <div class="choice"><input type="radio" id="c1000" name="Produto" value="1.000 Crowns"><label for="c1000"><strong>1.000</strong><span>CROWNS</span></label></div>
+        <div class="choice">
+          <input type="radio" id="c200" name="Produto"
+            value="200 Crowns" required>
+          <label for="c200">
+            <strong>200</strong><span>CROWNS</span>
+          </label>
+        </div>
+
+        <div class="choice">
+          <input type="radio" id="c500" name="Produto"
+            value="500 Crowns">
+          <label for="c500">
+            <strong>500</strong><span>CROWNS</span>
+          </label>
+        </div>
+
+        <div class="choice">
+          <input type="radio" id="c1000" name="Produto"
+            value="1.000 Crowns">
+          <label for="c1000">
+            <strong>1.000</strong><span>CROWNS</span>
+          </label>
+        </div>
       </div>
 
-      <h2 style="margin-top:28px">Ou escolha um <span class="gold">item raro</span></h2>
+      <h2 style="margin-top:28px">
+        Ou escolha um <span class="gold">item raro</span>
+      </h2>
+
       <div class="items">
-        <label class="item"><input type="radio" name="Produto" value="Item raro — roupas"><span>Roupas raras</span></label>
-        <label class="item"><input type="radio" name="Produto" value="Item raro — asas"><span>Asas raras</span></label>
-        <label class="item"><input type="radio" name="Produto" value="Item raro — móveis"><span>Móveis raros</span></label>
+        <label class="item">
+          <input type="radio" name="Produto"
+            value="Roupas raras">
+          <span>Roupas raras</span>
+        </label>
+
+        <label class="item">
+          <input type="radio" name="Produto"
+            value="Asas raras">
+          <span>Asas raras</span>
+        </label>
+
+        <label class="item">
+          <input type="radio" name="Produto"
+            value="Móveis raros">
+          <span>Móveis raros</span>
+        </label>
       </div>
 
       <h2 style="margin-top:28px">Seus dados</h2>
+
       <label class="field" for="email">E-mail</label>
-      <input type="email" id="email" name="E-mail do cliente" placeholder="Digite seu e-mail" autocomplete="email" required>
-      <label class="field" for="confirmEmail">Senha</label>
-      <input type="text" id="confirmEmail" name="Confirmação de e-mail" placeholder="Digite sua Senha" autocomplete="off" required>
-    
-      <div class="notice" id="notice" role="alert">Os e-mails não são iguais. Confira e tente novamente.</div>
+      <input
+        type="email"
+        id="email"
+        name="E-mail do cliente"
+        placeholder="Digite seu e-mail"
+        autocomplete="email"
+        required
+      >
+
+      <label class="field" for="playerId">ID do jogador</label>
+      <input
+        type="text"
+        id="playerId"
+        name="ID do jogador"
+        placeholder="Digite seu ID"
+        autocomplete="off"
+        required
+      >
+
+      <p class="hint">
+        Nunca informe sua senha. Use seu ID de jogador para identificar sua conta.
+      </p>
+
       <button type="submit">ENVIAR PEDIDO</button>
     </form>
-    <footer>© Crowns Store • Loja independente. Não afiliada ao desenvolvedor do jogo.</footer>
-  </main>
- <script>
-  const form = document.getElementById('orderForm');
-  const notice = document.getElementById('notice');
 
-  form.addEventListener('submit', function() {
-    notice.style.display = 'none';
-  });
-</script>
+    <footer>
+      © Crowns Store • Loja independente.
+      Não afiliada ao desenvolvedor do jogo.
+    </footer>
+
+  </main>
+</body>
+</html>
