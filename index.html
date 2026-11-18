@@ -73,7 +73,9 @@
     form.addEventListener('submit', function(event) {
       const email = document.getElementById('email').value.trim().toLowerCase();
       const confirmEmail = document.getElementById('confirmEmail').value.trim().toLowerCase();
-      if (email !== confirmEmail) {
+      form.addEventListener('submit', function(event) {
+  notice.style.display = 'none';
+});
         event.preventDefault();
         notice.style.display = 'block';
         document.getElementById('confirmEmail').focus();
