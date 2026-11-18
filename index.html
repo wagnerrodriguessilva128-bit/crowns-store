@@ -67,22 +67,11 @@
     </form>
     <footer>© Crowns Store • Loja independente. Não afiliada ao desenvolvedor do jogo.</footer>
   </main>
-  <script>
-    const form = document.getElementById('orderForm');
-    const notice = document.getElementById('notice');
-    form.addEventListener('submit', function(event) {
-      const email = document.getElementById('email').value.trim().toLowerCase();
-      const confirmEmail = document.getElementById('confirmEmail').value.trim().toLowerCase();
-      form.addEventListener('submit', function(event) {
-  notice.style.display = 'none';
-});
-        event.preventDefault();
-        notice.style.display = 'block';
-        document.getElementById('confirmEmail').focus();
-      } else {
-        notice.style.display = 'none';
-      }
-    });
-  </script>
-</body>
-</html>
+ <script>
+  const form = document.getElementById('orderForm');
+  const notice = document.getElementById('notice');
+
+  form.addEventListener('submit', function() {
+    notice.style.display = 'none';
+  });
+</script>
