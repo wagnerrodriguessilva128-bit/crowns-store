@@ -20,8 +20,27 @@
     .item{border:1px solid var(--line);border-radius:14px;padding:15px;background:#101018;display:flex;gap:10px;align-items:center}
     .item input{accent-color:var(--gold);width:18px;height:18px}.item span{font-size:14px}
     label.field{display:block;font-size:14px;margin:15px 0 7px;color:#e8e3d8}
-    input[type=email]{width:100%;padding:15px;border-radius:11px;border:1px solid var(--line);background:#0d0d14;color:white;font-size:16px;outline:none}
-    input[type=email]:focus{border-color:var(--gold)}.hint{font-size:12px;color:var(--muted);line-height:1.5;margin-top:12px}
+    input[type=email], input[type=text] {
+  width:100%;
+  padding:15px;
+  border-radius:11px;
+  border:1px solid var(--line);
+  background:#0d0d14;
+  color:white;
+  font-size:16px;
+  outline:none;
+}
+
+   input[type=email]:focus, input[type=text]:focus {
+  border-color:var(--gold);
+}
+
+.hint {
+  font-size:12px;
+  color:var(--muted);
+  line-height:1.5;
+  margin-top:12px;
+}
     button{width:100%;border:0;border-radius:12px;padding:16px;background:linear-gradient(135deg,#f0d18a,#c7973d);color:#17120a;font-weight:800;font-size:16px;cursor:pointer;margin-top:20px}
     button:hover{filter:brightness(1.06)}.notice{display:none;padding:12px;border-radius:10px;margin-top:14px;background:#2a1c18;color:#ffd2bd;font-size:14px}
     footer{text-align:center;color:#777481;font-size:12px;margin-top:25px}
